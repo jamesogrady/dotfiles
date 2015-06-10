@@ -161,15 +161,11 @@ fi
 # Navigation -------------------------------------------------------
 alias ..='cd ..'
 alias ...='cd .. ; cd ..'
-alias sshs='ssh -p 1209 -Y fes788@shamu.coe.utsa.edu'
-alias sshst='ssh -Y jtfoster@login4.stampede.tacc.utexas.edu'
-alias ip='ipython'
-alias ipq='ipython qtconsole --colors=linux'
-alias ipn='ipython notebook'
-alias python='ipython'
-alias ipsandia='ssh -L localhost:8888:localhost:8888 jtfoste@srngate.sandia.gov'
-alias cdcv="cd ~/Documents/LaTeX/CV"
-alias cdbib="cd ~/Documents/LaTeX/include"
+alias sshs='ssh -p 1209 -Y afq117@shamu.coe.utsa.edu'
+alias ssht='ssh -Y jogrady@login4.stampede.tacc.utexas.edu'
+alias ip='ipython --pylab'
+alias ipq='ipython qtconsole --pylab=inline --colors=linux'
+alias ipn='ipython notebook --pylab inline'
 cl() { cd $1; ls -la; } 
 
 # I got the following from, and mod'd it: http://www.macosxhints.com/article.php?story=20020716005123797
@@ -287,7 +283,6 @@ killhard() {
 }
 
 
-alias sshh="ssh -Y john@johnandlisa.homeip.net"
 alias showall="defaults write com.apple.finder AppleShowAllFiles TRUE"
 alias shownone="defaults write com.apple.finder AppleShowAllFiles FALSE"
 alias tarPeridigm="tar cjvf Peridigm.tar.bz2 --exclude=./.svn* --exclude=./build --exclude=./*/.svn* Peridigm"
@@ -318,10 +313,4 @@ alias cubit="/Applications/Cubit-13.0/cubit.command -nojournal -nographics -batc
 alias mkpdf="latexmk -pvc -pdf"
 alias mkps="latexmk -pvc -pdfps -view=pdf"
 alias mkcl="latexmk -CA"
-alias blog="cd $HOME/projects/blog"
-alias post="cd $HOME/projects/blog/content/posts"
-alias cdl="cd $HOME/Documents/LaTeX"
-#alias inkscape="/Applications/Inkscape.app/Contents/Resources/bin/inkscape -D -z"
 
-# added by travis gem
-[ -f /Users/fes788/.travis/travis.sh ] && source /Users/fes788/.travis/travis.sh

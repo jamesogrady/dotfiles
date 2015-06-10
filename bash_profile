@@ -21,10 +21,14 @@ if [ "$OS" == "darwin" ] ; then
   export PATH=/usr/texbin:$PATH
   export BYOBU_PREFIX=$(brew --prefix)
   export MODULEPATH=/usr/local/modules/Modules/3.2.10/modulefiles
-  source /usr/local/bin/virtualenvwrapper.sh
+#  source /usr/local/share/python/virtualenvwrapper.sh
+#  source /usr/local/opt/autoenv/activate.sh
   source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
   #
   export HOMEBREW_GITHUB_API_TOKEN=4a856b15b6245d9b7b996e39eb547d583167b0c0
+  export PYTHONPATH=$PYTHONPATH:/usr/local/trilinos/lib/python2.7/site-packages
+  export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages
+  export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
   export PATH=$HOME/.cabal/bin:$PATH
   [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
   module() { eval `$MODULEPATH/../bin/modulecmd bash $*`; }
